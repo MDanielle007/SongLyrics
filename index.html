@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>I'll Be Waiting By Cian Ducrot</title>
+        <link rel="shortcut icon" href="musical-notes.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alexandria&display=swap" rel="stylesheet">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: 'Alexandria', sans-serif,Roboto;
+            }
+
+            body{
+                background-color: rgb(20, 20, 20);
+                background-color: #000000;
+                opacity: 1;
+                background-image:  radial-gradient(#90002c 0.9500000000000001px, transparent 0.9500000000000001px), radial-gradient(#90002c 0.9500000000000001px, #101010 0.9500000000000001px);
+                background-size: 38px 38px;
+                background-position: 0 0,19px 19px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            header{
+                padding-left: 10px;
+                background: rgb(140,21,29);
+                background: linear-gradient(84deg, rgba(140,21,29,1) 0%, rgba(201,41,51,1) 12%, rgba(219,47,58,1) 22%, rgba(219,48,59,1) 38%, rgba(223,70,80,1) 64%, rgba(227,95,104,1) 75%, rgba(237,153,158,1) 89%, rgba(248,213,215,1) 100%);
+                width: 100%;
+                height: 250px;
+                top: 0;
+                position: fixed;
+                display: flex;
+                color: white;
+                z-index: 2;
+            }
+
+            .imageContainer{
+                width: 400px;
+                height: 100%;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+            }
+
+            .imageContainer img{
+                width: 370px;
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                margin-right: 15px;
+                margin-left: 20px;
+            }
+
+            .songInfo{  
+                width: 500px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .songTitle{
+                padding-top: 50px;
+                font-size: 70px;
+                font-weight: bold;
+            }
+
+            .songArtist{
+                padding-left: 10px;
+                font-size: 16px;
+            }
+
+            .moreSongInfo{
+                width: 400px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                row-gap: 10px;
+                padding-left: 10px;
+            }
+
+            .spanInfoTitle{
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            .moreInfos a{
+                color: white;
+                text-decoration: none;
+            }
+
+            main{
+                margin-top: 265px;
+                margin-bottom: 20px;
+                z-index: 1;
+            }
+
+            .Lyrics{
+                color: white;
+                margin-left: 30px;
+                width: 650px;
+            }
+
+            .LyricsHeader{
+                color: #fa6b9b;
+                background-image: -webkit-linear-gradient(90deg, #fa6b9b 20%,#f7548b 30%,#e91e63 77%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 50px;
+                font-weight: bold;
+                padding-left: 10px;
+                padding-bottom: 10px;
+            }
+
+            .LyricsMain{
+                background-color: rgb(28, 28, 28);
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+                padding-top: 20px;
+                padding-bottom: 30px;
+                align-items: center;
+                font-size: 19px;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+            }
+
+            .LyricsMain p:hover{
+                font-size: 21px;
+                font-weight: bold;
+                text-align: center;
+                width: 100%;
+                background-color: rgb(206, 64, 73);
+                transition: all 0.2s;
+            }
+
+            .musicVid{
+                position: fixed;
+                top: 270px;
+                right: 30px;
+                z-index: 3;
+            }
+
+            .musicVid video{
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+                border-radius: 15px;
+                width: 720px;
+            }
+
+            @media screen and (max-width: 1300px) {
+                .musicVid video{
+                    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+                    border-radius: 15px;
+                    width: 550px;
+                }
+
+                .songInfo{
+                
+                    width: 380px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                .songTitle{
+                    padding-top: 40px;
+                    font-size: 50px;
+                    font-weight: bold;
+                }
+
+                .LyricsMain p:hover{
+                    font-size: 21px;
+                    font-weight: bold;
+                    text-align: center;
+                    width: 100%;
+                    background-color: rgb(206, 64, 73);
+                    transition: all 0.2s;
+                }
+            }
+
+            @media screen and (max-width: 1010px) {
+                .musicVid video{
+                    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+                    border-radius: 15px;
+                    width: 400px;
+                    translate: 0px 220px;
+                }
+
+                .songInfo{
+                    width: 900px;
+                    min-width: 450px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                .songTitle{
+
+                    padding-top: 5px;
+                    font-size: 40px;
+                    font-weight: bold;
+                }
+
+                .songArtist{
+                    padding-left: 10px;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+
+                .imageContainer img{
+                    width: 350px;
+                    margin-top: 15px;
+                    margin-right: 15px;
+                    margin-left: 20px;
+                }
+
+                .moreSongInfo{
+                    visibility: hidden;
+                }
+
+                .Lyrics{
+                    color: white;
+                    margin: auto;
+                    min-width: 500px;
+                    margin-bottom: 250px;
+                }
+
+                .LyricsMain p:hover{
+                    font-size: 21px;
+                    font-weight: bold;
+                    text-align: center;
+                    width: 100%;
+                    background-color: rgb(206, 64, 73);
+                    transition: all 0.2s;
+                }
+            }
+
+            @media screen and (max-width: 400px){
+                .songTitle{
+                    padding-top: 100px;
+                    font-size: 40px;
+                    font-weight: bold;
+                }
+
+                .musicVid video{
+                    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+                    border-radius: 15px;
+                    width: 400px;
+                    translate: 0px 650px;
+                }
+
+                .Lyrics{
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 650px;
+                }
+
+                .LyricsMain{
+                    row-gap: 10px;
+                    margin-bottom: 250px;
+                    width: 550px;
+                    align-items: center;
+                    font-size: 16px;
+                }
+
+                .LyricsMain p:hover{
+                    font-size: 21px;
+                    font-weight: bold;
+                    text-align: center;
+                    width: 100%;
+                    background-color: rgb(206, 64, 73);
+                    transition: all 0.2s;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="imageContainer">
+                <img src="Ill-Be-Waiting-Pic.png" alt="">
+            </div>
+            <div class="songInfo">
+                <div class="songTitle">I'll Be Waiting</div>
+                <div class="songArtist">By Cian Ducrot</div>
+            </div>
+            <div class="moreSongInfo">
+                <div class="moreInfos">
+                    <p>
+                        <span class="spanInfoTitle">Album:&nbsp;</span>
+                        <a href="https://open.spotify.com/album/0aElkwlNZ3c3cCPqtfFeli">
+                            I'll Be Waiting &#183; Single
+                        </a>
+                    </p>
+                </div>
+                <div class="moreInfos">
+                    <p>
+                        <span class="spanInfoTitle">Released:&nbsp;</span>2023
+                    </p>
+                </div>
+                <div class="moreInfos">
+                    <p>
+                        <span class="spanInfoTitle">Artist:&nbsp;</span>
+                        <a href="https://open.spotify.com/artist/49jTY62Cpw3RYo4dLuG43W">
+                            Cian Ducrot
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="Lyrics">
+                <div class="LyricsHeader">Lyrics</div>
+                <div class="LyricsMain">
+                    <p>Leave your keys if you're not coming home</p>
+                    <p>You packed your bags full of letting go</p>
+                    <p>You were moving in, now you're moving on</p>
+                    <p>There's no getting used to you being gone</p>
+                    <br>
+                    <p>You were down now you're giving up</p>
+                    <p>Just a false start if you're quitting on us</p>
+                    <p>Another year, just another lie</p>
+                    <p>Wish you'd call so I could say goodbye</p>
+                    <br>
+                    <p>And let you know</p>
+                    <p>I'll wait for you every night</p>
+                    <br>
+                    <p>If you ever wanna fall in love</p>
+                    <p>If you ever wanna bet on us</p>
+                    <p>If you ever wanna be my one</p>
+                    <p>I'll be waiting</p>
+                    <br>
+                    <p>If you ever want one more night</p>
+                    <p>If you ever wanna make things right</p>
+                    <p>If you ever wanna change your mind</p>
+                    <p>I'll be waiting</p>
+                    <br>
+                    <p>I'll be waiting</p>
+                    <br>
+                    <p>Never thought that you'd be giving up</p>
+                    <p>Guess with all the climbing, you're tired, and you fell out of love</p>
+                    <p>Maybe if you don't crash the landing</p>
+                    <p>You'll end up right back where I'm standing</p>
+                    <br>
+                    <p>And then you'll know</p>
+                    <p>I'll wait for you every night</p>
+                    <br>
+                    <p>If you ever wanna fall in love</p>
+                    <p>If you ever wanna bet on us</p>
+                    <p>If you ever wanna be my one</p>
+                    <p>I'll be waiting</p>
+                    <br>
+                    <p>If you ever want one more night</p>
+                    <p>If you ever wanna make things right</p>
+                    <p>If you ever wanna change your mind</p>
+                    <p>I'll be waiting</p>
+                    <br>
+                    <p>If you ever wanna fall in love</p>
+                    <p>If you ever wanna bet on us</p>
+                    <p>If you ever wanna be my one</p>
+                    <p>I'll be waiting</p>
+                    <br>
+                    <p>If you ever want one more night</p>
+                    <p>If you ever wanna make things right</p>
+                    <p>If you ever wanna change your mind</p>
+                    <p>I'll be waiting</p>
+                    <br>
+                    <p>I'll be waiting</p>
+                </div>
+            </div>
+            <div class="musicVid">
+                <video controls>
+                    <source src="Cian Ducrot - I'll Be Waiting.mp4" type="video/mp4">
+                </video>
+            </div>
+        </main>
+    </body>
+</html>
