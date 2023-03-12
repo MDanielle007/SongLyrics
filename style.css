@@ -113,6 +113,7 @@ main{
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    justify-content: center;
     padding-top: 20px;
     padding-bottom: 30px;
     align-items: center;
@@ -163,6 +164,10 @@ main{
         font-weight: bold;
     }
 
+    .Lyrics{
+        justify-content: center;
+    }
+
     .LyricsMain p:hover{
         font-size: 21px;
         font-weight: bold;
@@ -174,10 +179,14 @@ main{
 }
 
 @media screen and (max-width: 1010px) {
+    .musicVid{
+        bottom: 20px;
+    }
+
     .musicVid video{
         box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
         border-radius: 15px;
-        width: 400px;
+        width: 360px;
     }
 
     .songInfo{
@@ -190,7 +199,6 @@ main{
     }
 
     .songTitle{
-
         padding-top: 5px;
         font-size: 40px;
         font-weight: bold;
@@ -215,7 +223,7 @@ main{
 
     .Lyrics{
         color: white;
-        margin: auto;
+        justify-content: center;
         min-width: 500px;
         margin-bottom: 150px;
     }
