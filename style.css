@@ -4,6 +4,11 @@
     font-family: 'Alexandria', sans-serif,Roboto;
 }
 
+*::selection {
+    background-color: #EC969B;
+    color: #c53842;
+}
+
 body{
     background-color: rgb(20, 20, 20);
     background-color: #000000;
